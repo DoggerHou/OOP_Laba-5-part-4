@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <memory>
 
 using namespace std;
@@ -51,8 +51,8 @@ int main()
     shared_ptr<Animal> shared_ptr1 = std::make_shared<Animal>(); //Создаётся объект
     {
         shared_ptr<Animal> shared_ptr2 = shared_ptr1; 
-        //Теперь у объекта два владельца, выраженных в виде ptr и ptr2
-    }   //ptr2 выходит из области видимости, 
+        //Теперь у объекта два владельца, выраженных в виде shared_ptr и shared_ptr2
+    }   //shared_ptr2 выходит из области видимости, 
     cout << "Уничтожение объекта произойдет тогда, когда shared_ptr1 выйдет из области видимости(т.е. ниже:)\n";
 }
 
